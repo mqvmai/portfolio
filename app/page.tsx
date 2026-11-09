@@ -1,61 +1,9 @@
-const projects = [
-  {
-    title: "TourSpot",
-    slug: "tourspot",
-    description:
-      "Search any city, get POIs ranked by real review volume — not paid placement. GraphQL API backed by Google Places, Redis-cached for speed.",
-    tags: ["Next.js", "TypeScript", "Node.js", "NestJS", "GraphQL", "PostgreSQL", "Redis", "Google Places API"],
-    icon: "🗺️",
-    href: "#",
-  },
-  {
-    title: "AutoAlt",
-    slug: "autoalt",
-    description:
-      "Upload an image, get production-ready alt text in seconds. Runs OpenAI Vision and Amazon Rekognition in parallel and returns the best result.",
-    tags: ["React", "TypeScript", "Node.js", "NestJS", "OpenAI Vision", "Amazon Rekognition", "AWS S3", "Docker"],
-    icon: "🤖",
-    href: "#",
-  },
-  {
-    title: "DocuChat",
-    slug: "docuchat",
-    description:
-      "Upload any PDF, ask questions in plain English, get cited answers. Chunks and embeds the document on upload, retrieves relevant passages at query time.",
-    tags: ["Python", "FastAPI", "pgvector", "OpenAI", "React", "Docker"],
-    icon: "💬",
-    href: "#",
-  },
-  {
-    title: "ScoreLine",
-    slug: "scoreline",
-    description:
-      "Live NBA and NFL scores alongside real-time betting lines from multiple sportsbooks. Line movements flagged as they shift — all pushed over WebSocket.",
-    tags: ["Vue 3", "TypeScript", "Node.js", "NestJS", "Socket.io", "Redis", "MongoDB", "Docker"],
-    icon: "🏆",
-    href: "#",
-  },
-];
-
-const links = [
-  { label: "GitHub",   href: "https://github.com/mqvmai" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/mikemaiswe" },
-  { label: "Resume",   href: "/resume.pdf" },
-];
-
-const stack = [
-  "TypeScript", "JavaScript", "Node.js", "React", "Vue 3",
-  "NestJS", "Python", "PostgreSQL", "Redis", "MongoDB",
-  "Docker", "AWS", "OpenAI",
-];
-
-const industries = ["Publishing", "Healthcare", "Fintech"];
+import { projects, links, stack, industries } from "./_data/projects";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen bg-gray-50 text-gray-900">
 
-      {/* ── Mobile header (shown below md) ──────────────────── */}
       <div className="fixed inset-x-0 top-0 z-40 flex items-center justify-between border-b border-gray-100 bg-white px-5 py-3 md:hidden">
         <div>
           <span className="text-sm font-bold text-gray-900">Mike Mai</span>
@@ -70,10 +18,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── Sidebar ─────────────────────────────────────────── */}
       <aside className="hidden w-72 shrink-0 flex-col border-r border-gray-100 bg-white px-7 py-10 md:flex">
-
-        {/* Avatar + name */}
         <div className="mb-6">
           <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-gray-700 to-gray-900 text-2xl font-black text-white shadow-sm">
             MM
@@ -83,7 +28,6 @@ export default function Home() {
           <p className="mt-0.5 text-xs text-gray-400">10+ years experience</p>
         </div>
 
-        {/* Open to work */}
         <span className="mb-8 inline-flex items-center gap-1.5 self-start rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-200">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
           Open to work
@@ -91,7 +35,6 @@ export default function Home() {
 
         <div className="mb-7 h-px bg-gray-100" />
 
-        {/* Industries */}
         <div className="mb-7">
           <p className="mb-3 text-[10px] font-semibold uppercase tracking-widest text-gray-400">
             Industries
@@ -106,7 +49,6 @@ export default function Home() {
 
         <div className="mb-7 h-px bg-gray-100" />
 
-        {/* Core stack */}
         <div className="mb-7">
           <p className="mb-3 text-[10px] font-semibold uppercase tracking-widest text-gray-400">
             Core Stack
@@ -123,7 +65,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Links — pinned to bottom */}
         <div className="mt-auto space-y-1">
           {links.map((l) => (
             <a
@@ -140,7 +81,6 @@ export default function Home() {
         </div>
       </aside>
 
-      {/* ── Main content ────────────────────────────────────── */}
       <main className="flex-1 px-6 pt-20 pb-12 md:px-12 md:pt-10">
         <div className="mb-8">
           <h2 className="text-xl font-bold text-gray-900">Projects</h2>
@@ -156,7 +96,6 @@ export default function Home() {
               href={p.href}
               className="group overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
             >
-              {/* Terminal title bar */}
               <div className="flex items-center gap-1.5 border-b border-gray-100 bg-gray-50/80 px-4 py-2.5">
                 <span className="h-3 w-3 rounded-full bg-red-400" />
                 <span className="h-3 w-3 rounded-full bg-yellow-400" />
@@ -169,7 +108,6 @@ export default function Home() {
                 </span>
               </div>
 
-              {/* Card body */}
               <div className="p-6">
                 <div className="mb-3 flex items-center gap-2.5">
                   <span className="text-2xl">{p.icon}</span>
@@ -197,6 +135,7 @@ export default function Home() {
           $ exit &mdash; mike mai 2026
         </footer>
       </main>
+
     </div>
   );
 }
