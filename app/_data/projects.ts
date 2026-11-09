@@ -39,14 +39,17 @@ export const projects = [
 
 export const links = [
   { label: "GitHub",   href: "https://github.com/mqvmai" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/mikemaiswe" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/mm-dev" },
   { label: "Resume",   href: "/resume.pdf" },
 ];
 
-export const stack = [
-  "TypeScript", "JavaScript", "Node.js", "React", "Vue 3",
-  "NestJS", "Python", "PostgreSQL", "Redis", "MongoDB",
-  "Docker", "AWS", "OpenAI",
+export const stackRows = [
+  ["TypeScript", "Python", "Java"],
+  ["React", "Vue 3", "Next.js"],
+  ["NestJS", "Spring Boot", "GraphQL"],
+  ["PostgreSQL", "MongoDB", "Redis"],
+  ["AWS", "Docker", "Kubernetes"],
+  ["OpenAI", "Rekognition", "RAG"],
 ];
 
 export const industries = ["Publishing", "Healthcare", "Fintech"];
