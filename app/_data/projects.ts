@@ -1,11 +1,11 @@
 export const projects = [
   {
-    title: "TourSpot",
-    slug: "tourspot",
+    title: "BasicB",
+    slug: "basicb",
     icon: "🗺️",
     description:
       "Search any city, get POIs ranked by real review volume — not paid placement. GraphQL API backed by Google Places, Redis-cached for speed.",
-    tags: ["Next.js", "TypeScript", "Node.js", "NestJS", "GraphQL", "PostgreSQL", "Redis", "Google Places API"],
+    tags: ["Vue 3", "TypeScript", "Node.js", "GraphQL", "Redis", "Google Places API"],
     href: "#",
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
     icon: "🏆",
     description:
       "Live NBA and NFL scores alongside real-time betting lines from multiple sportsbooks. Line movements flagged as they shift — all pushed over WebSocket.",
-    tags: ["Vue 3", "TypeScript", "Node.js", "NestJS", "Socket.io", "Redis", "MongoDB", "Docker"],
+    tags: ["Next.js", "TypeScript", "Node.js", "NestJS", "Socket.io", "Redis", "MongoDB", "Docker"],
     href: "#",
   },
 ];
